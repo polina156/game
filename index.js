@@ -43,7 +43,7 @@ while (true) {
         else if (choice === "2") room = "пустошь";
         else if (choice === "3") showInventory();
         else alert("Такого прохода нет.");
-    } 
+    }
     else if (room === "затопленный тоннель") {
         const choice = prompt(
             "ЗАТОПЛЕННЫЙ ТОННЕЛЬ\n" +
@@ -74,7 +74,7 @@ while (true) {
         } else if (choice === "2") room = "старый колодец";
         else if (choice === "3") room = "затопленный тоннель";
         else alert("Такого действия нет.");
-    } 
+    }
     else if (room === "старый колодец") {
         const choice = prompt(
             "СТАРЫЙ КОЛОДЕЦ\n" +
@@ -111,7 +111,7 @@ while (true) {
         } else if (choice === "5") room = "нейболт";
         else alert("Такого прохода нет.");
     }
-     else if (room === "заброшенный дом") {
+    else if (room === "заброшенный дом") {
         const choice = prompt(
             "ЗАБРОШЕННЫЙ ДОМ\n" +
             "1 — Взять рогатку\n" +
@@ -120,6 +120,18 @@ while (true) {
         );
         if (choice === "0" || choice === null) break;
         else if (choice === "1") takeItem("рогатка", "На гвозде висит рогатка Бена.");
+        else if (choice === "2") room = "пустошь";
+        else alert("Такого действия нет.");
+    }
+    else if (room === "аптека кэша") {
+        const choice = prompt(
+            "АПТЕКА КЭША\n" +
+            "1 — Взять ингалятор\n" +
+            "2 — Вернуться в Пустошь\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") takeItem("ингалятор Эдди", "На прилавке лежит ингалятор Эдди.");
         else if (choice === "2") room = "пустошь";
         else alert("Такого действия нет.");
     }
