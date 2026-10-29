@@ -43,7 +43,8 @@ while (true) {
         else if (choice === "2") room = "пустошь";
         else if (choice === "3") showInventory();
         else alert("Такого прохода нет.");
-    } else if (room === "затопленный тоннель") {
+    } 
+    else if (room === "затопленный тоннель") {
         const choice = prompt(
             "ЗАТОПЛЕННЫЙ ТОННЕЛЬ\n" +
             "1 — В библиотеку Бена\n" +
@@ -54,7 +55,8 @@ while (true) {
         else if (choice === "1") room = "библиотека бена";
         else if (choice === "2") room = "нейболт";
         else alert("Такого прохода нет.");
-    } else if (room === "библиотека бена") {
+    }
+    else if (room === "библиотека бена") {
         const choice = prompt(
             "БИБЛИОТЕКА БЕНА\n" +
             "1 — Прочитать дневник Бена\n" +
@@ -72,7 +74,8 @@ while (true) {
         } else if (choice === "2") room = "старый колодец";
         else if (choice === "3") room = "затопленный тоннель";
         else alert("Такого действия нет.");
-    } else if (room === "старый колодец") {
+    } 
+    else if (room === "старый колодец") {
         const choice = prompt(
             "СТАРЫЙ КОЛОДЕЦ\n" +
             "1 — Достать блестящий предмет\n" +
@@ -107,4 +110,16 @@ while (true) {
             }
         } else if (choice === "5") room = "нейболт";
         else alert("Такого прохода нет.");
+    }
+     else if (room === "заброшенный дом") {
+        const choice = prompt(
+            "ЗАБРОШЕННЫЙ ДОМ\n" +
+            "1 — Взять рогатку\n" +
+            "2 — Вернуться в Пустошь\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") takeItem("рогатка", "На гвозде висит рогатка Бена.");
+        else if (choice === "2") room = "пустошь";
+        else alert("Такого действия нет.");
     }
