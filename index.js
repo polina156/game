@@ -72,4 +72,15 @@ while (true) {
         } else if (choice === "2") room = "старый колодец";
         else if (choice === "3") room = "затопленный тоннель";
         else alert("Такого действия нет.");
+    } else if (room === "старый колодец") {
+        const choice = prompt(
+            "СТАРЫЙ КОЛОДЕЦ\n" +
+            "1 — Достать блестящий предмет\n" +
+            "2 — Вернуться в библиотеку\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") takeItem("серебряная монета", "На дне колодца лежит серебряная монета.");
+        else if (choice === "2") room = "библиотека бена";
+        else alert("Такого действия нет.");
     }
