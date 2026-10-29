@@ -29,3 +29,18 @@ function takeItem(name, message) {
     "Совет: в библиотеке Бена есть дневник. И не отступайте в логове —\n" +
     "клоун питается страхом."
 );
+while (true) {
+    if (room === "нейболт") {
+        const choice = prompt(
+            "ДОМ НА НЕЙБОЛТ-СТРИТ\n" +
+            "1 — Затопленный тоннель\n" +
+            "2 — Пустошь\n" +
+            "3 — Проверить рюкзак\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") room = "затопленный тоннель";
+        else if (choice === "2") room = "пустошь";
+        else if (choice === "3") showInventory();
+        else alert("Такого прохода нет.");
+    }
