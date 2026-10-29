@@ -54,4 +54,22 @@ while (true) {
         else if (choice === "1") room = "библиотека бена";
         else if (choice === "2") room = "нейболт";
         else alert("Такого прохода нет.");
+    } else if (room === "библиотека бена") {
+        const choice = prompt(
+            "БИБЛИОТЕКА БЕНА\n" +
+            "1 — Прочитать дневник Бена\n" +
+            "2 — Заглянуть в старый колодец\n" +
+            "3 — Вернуться в тоннель\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") {
+            if (readDiary === true) alert("Вы уже прочли дневник.");
+            else {
+                readDiary = true;
+                alert("«Пеннивайз питается страхом. Не отступай — и он ослабнет».");
+            }
+        } else if (choice === "2") room = "старый колодец";
+        else if (choice === "3") room = "затопленный тоннель";
+        else alert("Такого действия нет.");
     }
