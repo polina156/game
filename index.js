@@ -43,4 +43,15 @@ while (true) {
         else if (choice === "2") room = "пустошь";
         else if (choice === "3") showInventory();
         else alert("Такого прохода нет.");
+    } else if (room === "затопленный тоннель") {
+        const choice = prompt(
+            "ЗАТОПЛЕННЫЙ ТОННЕЛЬ\n" +
+            "1 — В библиотеку Бена\n" +
+            "2 — Назад к Нейболт-стрит\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") room = "библиотека бена";
+        else if (choice === "2") room = "нейболт";
+        else alert("Такого прохода нет.");
     }
