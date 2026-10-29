@@ -84,3 +84,27 @@ while (true) {
         else if (choice === "2") room = "библиотека бена";
         else alert("Такого действия нет.");
     }
+    else if (room === "пустошь") {
+        const choice = prompt(
+            "ПУСТОШЬ\n" +
+            "1 — Заброшенный дом\n" +
+            "2 — Аптека Кэша\n" +
+            "3 — Синагога\n" +
+            "4 — Дверь в логово Пеннивайза\n" +
+            "5 — Вернуться к Нейболт-стрит\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") room = "заброшенный дом";
+        else if (choice === "2") room = "аптека кэша";
+        else if (choice === "3") room = "синагога";
+        else if (choice === "4") {
+            if (inventory.includes("серебряная монета")) {
+                alert("Монета падает в воду. Дверь открыта.");
+                room = "логово";
+            } else {
+                alert("Дверь не поддаётся. Нужна серебряная монета.");
+            }
+        } else if (choice === "5") room = "нейболт";
+        else alert("Такого прохода нет.");
+    }
