@@ -147,4 +147,34 @@ while (true) {
         else if (choice === "2") room = "пустошь";
         else alert("Такого действия нет.");
     }
-
+    else if (room === "логово") {
+        const choice = prompt(
+            "ЛОГОВО ПЕННИВАЙЗА\n" +
+            "Клоун улыбается. Беверли висит в воздухе.\n" +
+            "1 — Начать бой\n" +
+            "2 — Отступить за снаряжением\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") {
+            if (
+                inventory.includes("рогатка") &&
+                inventory.includes("ингалятор Эдди") &&
+                inventory.includes("картина Модильяни") &&
+                fear === 0
+            ) {
+                alert("Рогатка бьёт точно в цель. Ингалятор даёт силы, картина защищает. Пеннивайз визжит и исчезает. ПОБЕДА!");
+                const inhalerIndex = inventory.indexOf("ингалятор Эдди");
+                if (inhalerIndex !== -1) {
+                    inventory.splice(inhalerIndex, 1);
+                }
+            } else {
+                alert("Пеннивайз смеётся. Не хватает снаряжения или страх уже пустил корни. ПОРАЖЕНИЕ.");
+            }
+            break;
+        } else if (choice === "2") {
+            fear = fear + 1;
+            alert("Вы отступили. Страх стал сильнее (уровень: " + fear + ").");
+            room = "пустошь";
+        } else alert("Такого действия нет.");
+    }
