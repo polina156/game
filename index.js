@@ -135,3 +135,16 @@ while (true) {
         else if (choice === "2") room = "пустошь";
         else alert("Такого действия нет.");
     }
+    else if (room === "синагога") {
+        const choice = prompt(
+            "СИНАГОГА\n" +
+            "1 — Снять картину\n" +
+            "2 — Вернуться в Пустошь\n" +
+            "0 — Уйти"
+        );
+        if (choice === "0" || choice === null) break;
+        else if (choice === "1") takeItem("картина Модильяни", "На стене висит картина Модильяни.");
+        else if (choice === "2") room = "пустошь";
+        else alert("Такого действия нет.");
+    }
+
